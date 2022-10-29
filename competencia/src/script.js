@@ -53,21 +53,31 @@ const __API_REST_PRIVATE = "https://mqjl9s6vf4.execute-api.eu-west-1.amazonaws.c
 
 
         //retornar el METRIC
-
-        for(i=0; i < events[0].detail.eventBody.data.metrics.length; i++){
+        var rMemberUsersCount=(events[0].detail.eventBody.data.metrics[0].stats.count)
+        console.log(rMemberUsersCount);
+       // for(i=1; i < events[0].detail.eventBody.data.metrics.length; i++){
         //for (a=0; a < events[0].detail.eventBody.data.metrics.stats.length; a++){
         
-        var metric=(events[0].detail.eventBody.data.metrics[i].metric);
-        var rMemberUsersCount=(events[0].detail.eventBody.data.metrics[i].stats.count)
-        console.log(metric);
-        console.log(rMemberUsersCount);
-        }
+       // var metric=(events[0].detail.eventBody.data.metrics[i].metric);
+
+        var rActiveMembers=( events[0].detail.eventBody.data.metrics[1].usersId);
+        var rOnQueueUsers_interacting=(events[0].detail.eventBody.data.metrics[2].usersId);
+        var rOnQueueUsers_idle=(events[0].detail.eventBody.data.metrics[3].usersId);
+        var rOnQueueUsers_acw=(events[0].detail.eventBody.data.metrics[4].usersId);
+        
+        
+        
+        console.log(rActiveMembers);
+        console.log(rOnQueueUsers_interacting);
+        console.log(rOnQueueUsers_idle);
+        console.log(rOnQueueUsers_acw);
+        
 
 
 
         //retornar el count 
         var coutn=(events[0].detail.eventBody.data.metrics[4].stats.count);
-        //console.log(coutn);
+       // console.log(coutn);
         ///console.log(x);
         
         // console.log(nombre_evento)
