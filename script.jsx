@@ -1,4 +1,4 @@
-// ESTADO DE LOS AGENTES
+// ESTADO DE LOS AGENTES: Nombre = EstadoAgentes
 
 // id y nombres
 // "id" - "name"
@@ -18,15 +18,15 @@
 // De los asesores que estan activos cuales se encuentran en un estado ACW
 //  rOnQueueUsers = "ACW" - "usersId"
 
+// ________________________________________________________________________
 
-// INDICADORES
+// INDICADORES: Nombre = Indicadores
 
 // id y nombres
 // "id" - "name"
 
 // numero de eventos - Cuantos de han producido desde el ultimo evento 
 // "aEvents" - 
-
 
 // Numero de llamadas de telefono 
 // "aCalls"
