@@ -40,7 +40,11 @@ const __API_REST_PRIVATE = "https://mqjl9s6vf4.execute-api.eu-west-1.amazonaws.c
         // nombre agente 
         for(i=0; i < events[0].detail.eventBody.service.users.length; i++){
         var name=(events[0].detail.eventBody.service.users[i].name);
-        //console.log(name);
+
+        var objetivo = document.getElementById('nameuser');
+        objetivo.innerHTML = name;
+
+        console.log(name);
         }
 
 
@@ -88,3 +92,4 @@ const __API_REST_PRIVATE = "https://mqjl9s6vf4.execute-api.eu-west-1.amazonaws.c
     }
     datos_json();
 })()
+
