@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5" >
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+
+    <link rel="stylesheet" href="/Competencia/competencia/src/static/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <form>
+      <div id="GeneralLogin">
+        <font></font>
+        <img src="Images\UPD.jpg" height="140" id="ImagenLogin" /><font></font>
+        <h1>Por favor iniciar sesión</h1>
+        <div class="form-floating mt-3" id="Login">
+          <input
+            type="email"
+            class="form-control"
+            th:field="*{email}"
+            id="floatingInput"
+            placeholder="name@example.com"
+          />
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mt-3">
+          <input
+            type="password"
+            class="form-control"
+            th:field="*{password}"
+            id="floatingPassword"
+            placeholder="Password"
+          />
+          <label for="floatingPassword">Password</label>
+        </div>
+        <div class="form-check mt-5" id="Rec">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckDefault"
+          />
+          <label class="form-check-label" for="flexCheckDefault"
+            >Recordar mis Datos</label
+          >
+        </div>
+
+        <div class="mt-5">
+          <button class="btn btn-primary" type="submit" id="IniciarSesion">
+            Iniciar sesión
+          </button>
+        </div>
+
+        <div class="mt-5">
+          <p>2022</p>
+        </div>
+      </div>
+    </form>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

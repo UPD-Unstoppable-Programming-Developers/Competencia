@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ingresos y Egresos</title>
+    <link rel="stylesheet" href="/Competencia/competencia/src/static/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+        <div class="container"></div>
+        <div class="btn-menu"></div>
+          <label for="btn-menu" id="CajaMenu">☰</label>
+    </header>
+    <div id="Table">
+        <h2>Usuarios</h2>
+      </div>
+  
+      <table class="tableUsers" id="List">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+            <td class=""></td>
+          </tr>
+
+          <table class="tableUsersConect" id="List">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class=""></td>
+                <td class=""></td>
+                <td class=""></td>
+                <td class=""></td>
+                <td class=""></td>
+                <td class=""></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        </tbody>
+      </table>
+    </div>
+    <div class="capa"></div>
+    <input type="checkbox" id="btn-menu" />
+    <div class="container-menu">
+      <div class="cont-menu">
+        <nav>
+            <font></font> <img src="/Competencia/competencia/src/static/Images/UPD.jpg" height="140" /><font></font>
+              <div sec:authorize="hasAnyRole('ADMIN','USER')" > <a href="./inicio.html">Inicio</a> </div>
+              <div sec:authorize="hasRole('ADMIN')" ><a href="./usuarios.html">Usuarios</a> </div>
+              <div sec:authorize="hasRole('ADMIN')" ><a href="./indices.html">Indices</a> </div>
+
+            <div id="Colaboradores">
+            <p>Colaboradores</p>
+            <font></font> <img src="\Images\MinTic.jpg" height="76" /><font></font><br>
+            <font></font> <img src="\Images\UdeA.jpg" height="70" /><font></font><br>
+          </div>
+            <form th:action="@{/logout}" method="post">
+
+                <button type="submit" id="CerrarSesion"> Cerrar Sesión</button>
+
+            </form>
+        </nav>
+        <label for="btn-menu">✖️</label>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
